@@ -6,3 +6,12 @@ const add = (a: number, b: number) => {
 const subtract = (a: number, b: number): number => {
   return a - b;
 };
+
+// Assign Type Annotations for Function
+function devide(a: number, b: number): number {
+  return a / b;
+}
+
+const multiply = function (a: number, b: number): number {
+  return a * b;
+};
