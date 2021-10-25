@@ -41,3 +41,16 @@ const throwError3 = (message: string): void => {
     throw new Error(message);
   }
 };
+
+// Type Annotation for Destructuring
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny',
+};
+
+const logWeather = ({ date, weather }: { date: Date; weather: String }) => {
+  console.log(date);
+  console.log(weather);
+};
+
+logWeather(todaysWeather);
