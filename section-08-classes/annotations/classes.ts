@@ -9,7 +9,19 @@ class Vehicle {
   }
 }
 
+// Extends Class
+class Car extends Vehicle {
+  // overwrite methods
+  drive(): void {
+    console.log('vroom');
+  }
+}
+
 // Create instance
 const vehicle = new Vehicle();
 vehicle.drive();
 vehicle.honk();
+
+const car = new Car();
+car.drive();
+car.honk();
