@@ -1,7 +1,10 @@
 // Create Blueprint
 class Vehicle {
-  protected drive(): void {
-    console.log('chugga chugga');
+  // init fields
+  color: string = 'red';
+
+  constructor(color: string) {
+    this.color = color;
   }
 
   private honk(): void {
@@ -9,24 +12,20 @@ class Vehicle {
   }
 }
 
-// Extends Class
-class Car extends Vehicle {
-  // overwrite methods
-  drive(): void {
-    console.log('vroom');
-  }
-
-  startDrivingProcess(): void {
-    this.drive();
-  }
-}
-
 // Create instance
-const vehicle = new Vehicle();
-// -- Private not access methods
-// vehicle.drive();
-// vehicle.honk();
+const vehicle = new Vehicle('orange');
+console.log(vehicle.color);
 
-const car = new Car();
-car.startDrivingProcess();
-car.honk();
+// // Extends Class
+// class Car extends Vehicle {
+//   private drive(): void {
+//     console.log('vroom');
+//   }
+
+//   startDrivingProcess(): void {
+//     this.drive();
+//   }
+// }
+
+// const car = new Car();
+// car.startDrivingProcess();
