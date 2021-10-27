@@ -1,10 +1,10 @@
 // Create Blueprint
 class Vehicle {
-  drive(): void {
+  protected drive(): void {
     console.log('chugga chugga');
   }
 
-  honk(): void {
+  private honk(): void {
     console.log('beep');
   }
 }
@@ -15,13 +15,18 @@ class Car extends Vehicle {
   drive(): void {
     console.log('vroom');
   }
+
+  startDrivingProcess(): void {
+    this.drive();
+  }
 }
 
 // Create instance
 const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+// -- Private not access methods
+// vehicle.drive();
+// vehicle.honk();
 
 const car = new Car();
-car.drive();
+car.startDrivingProcess();
 car.honk();
