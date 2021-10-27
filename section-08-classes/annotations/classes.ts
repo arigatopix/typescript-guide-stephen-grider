@@ -1,11 +1,6 @@
 // Create Blueprint
 class Vehicle {
-  // init fields
-  color: string = 'red';
-
-  constructor(color: string) {
-    this.color = color;
-  }
+  constructor(public color: string) {}
 
   private honk(): void {
     console.log('beep');
