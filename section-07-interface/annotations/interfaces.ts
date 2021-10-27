@@ -1,7 +1,4 @@
-interface Vehicle {
-  name: string;
-  year: Date;
-  broken: boolean;
+interface Reportable {
   summary(): string;
 }
 
@@ -14,8 +11,8 @@ const oldCivic = {
   }, // ปกติเป็น summary: function() { .. }
 };
 
-const prinVehicle = (vehicle: Vehicle): void => {
-  console.log(vehicle.summary());
+const reportSummary = (item: Reportable): void => {
+  console.log(item.summary());
 };
 
-prinVehicle(oldCivic);
+reportSummary(oldCivic);
