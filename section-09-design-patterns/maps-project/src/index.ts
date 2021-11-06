@@ -1,9 +1,9 @@
-// import { User } from './User';
+import { User } from './User';
 // import { Company } from './Company';
 
-import { customMap } from './customMap';
+import { CustomMap } from './customMap';
 
-new customMap('map');
+const user = new User();
+const customMap = new CustomMap('map');
 
-//create other div id
-new customMap('other');
+customMap.addUserMarker(user);
