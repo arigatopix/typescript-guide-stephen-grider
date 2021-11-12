@@ -1,7 +1,7 @@
 export class NumbersCollection {
   constructor(public data: number[]) {}
 
-  get length() {
+  get length(): number {
     return this.data.length;
   }
 
