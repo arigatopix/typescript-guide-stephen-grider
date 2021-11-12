@@ -1,11 +1,12 @@
 class Sorter {
-  constructor(public collection: number[]) {
+  constructor(public collection: number[] | string) {
     // argument
   }
 
   sort(): void {
     const { length } = this.collection;
 
+    // If collection is an array of numbers
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length - i - 1; j++) {
         if (this.collection[j] > this.collection[j + 1]) {
@@ -16,6 +17,9 @@ class Sorter {
       }
     }
   }
+
+  // If collection is a string, do this logic instead:
+  // ~~~ logic to compare and swap characters in a string
 }
 
 // initial instance
