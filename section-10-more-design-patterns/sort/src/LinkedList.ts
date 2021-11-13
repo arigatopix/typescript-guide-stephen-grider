@@ -1,10 +1,11 @@
+import { Sorter } from './Sorter';
 class Node {
   next: Node | null = null;
 
   constructor(public data: number) {}
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter {
   // new LinkedList เป็น null ได้ แล้ว assign node
   head: Node | null = null;
 
