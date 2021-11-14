@@ -2,8 +2,11 @@ import fs from 'fs';
 import { dateStringToDate } from './utils';
 import { MatchResult } from './MatchResult';
 
+type MatchData = [Date, string, string, number, number, MatchResult, string];
+
 export class CsvFileReader {
-  data: string[][] = [];
+  // MatchData เป็น array อยู่แล้ว  -> จึงเป็น array of array ของ type MatchData
+  data: MatchData[] = [];
 
   constructor(public filename: string) {}
 
@@ -16,7 +19,7 @@ export class CsvFileReader {
       .map((row: string): string[] => {
         return row.split(',');
       })
-      .map((row: string[]): any => {
+      .map((row: string[]): MatchData => {
         // iterate row -> [ [rows of data], ... ]
         return [
           dateStringToDate(row[0]),

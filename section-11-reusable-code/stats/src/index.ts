@@ -6,6 +6,10 @@ const reader = new CsvFileReader('football.csv');
 // read file first
 reader.read();
 
+const dateOfFirstMatch = reader.data[0][0];
+
+console.log(dateOfFirstMatch);
+
 // Analyze 'Man United' wins
 let manUnitedWins = 0;
 
