@@ -9,4 +9,20 @@ const matches = fs
     return row.split(',');
   });
 
-console.log(matches);
+// Analyze 'Man United' wins
+let manUnitedWins = 0;
+
+// loop array
+for (let match of matches) {
+  // check match แต่ละ column
+
+  if (match[1] === 'Man United' && match[5] === 'H') {
+    // Check Home team and Home win
+    manUnitedWins++;
+  } else if (match[2] === 'Man United' && match[5] === 'A') {
+    // Check Away team and Away win
+    manUnitedWins++;
+  }
+}
+
+console.log(`Man United won ${manUnitedWins} games`);
