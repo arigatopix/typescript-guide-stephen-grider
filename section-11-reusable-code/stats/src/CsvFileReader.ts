@@ -3,13 +3,12 @@ import { MatchResult } from './MatchResult';
 
 type MatchData = [Date, string, string, number, number, MatchResult, string];
 
-export abstract class CsvFileReader {
-  // MatchData เป็น array อยู่แล้ว  -> จึงเป็น array of array ของ type MatchData
-  data: MatchData[] = [];
+export abstract class CsvFileReader<T> {
+  data: T[] = [];
 
   constructor(public filename: string) {}
 
-  abstract mapRow(row: string[]): MatchData
+  abstract mapRow(row: string[]): T
 
   read(): void {
     this.data = fs
