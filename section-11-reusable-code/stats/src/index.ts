@@ -13,9 +13,6 @@ const matchReader = new MatchReader(csvFileReader);
 // Load file
 matchReader.load();
 
-// console.log(matchReader.matches)
-
-// Example
 const summary = new Summary(
   new WinsAnalysis('Man United'),
   new ConsoleReport()
