@@ -16,3 +16,7 @@ function testDecorator(target: any, key: string): void {
   console.log('Target: ', target);
   console.log('Key: ', key);
 }
+
+// manual run decorator
+console.log('---Manul run decorator function---');
+testDecorator(Boat.prototype, 'pilot');
